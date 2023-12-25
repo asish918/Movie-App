@@ -40,6 +40,7 @@ import com.example.netflix_clone.ui.dashboard.JetFlixBottomBar
 import com.example.netflix_clone.ui.dashboard.home.component.BottomSheetContent
 import com.example.netflix_clone.ui.navigation.NavGraph
 import com.example.netflix_clone.ui.navigation.MainActions
+import com.example.netflix_clone.ui.viewmodel.ProvideMultiViewModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
@@ -48,6 +49,8 @@ import kotlinx.coroutines.launch
 @Composable
 fun NetflixApp() {
         NetflixTheme {
+            ProvideMultiViewModel {
+
 
                 val (shouldShowAppBar, updateAppBarVisibility) = remember { mutableStateOf(true) }
                 val navController = rememberNavController()
@@ -104,6 +107,7 @@ fun NetflixApp() {
                     }
                 }
             }
+        }
 }
 
 @OptIn(ExperimentalMaterialApi::class)
